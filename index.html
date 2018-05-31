@@ -8,7 +8,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="PalletOne招聘">
 <meta property="og:description" content="区块链跨链项目PalletOne诚聘英才">
-<meta property="og:image" content="img/PalletOne.png">
+<meta property="og:image" content="https://studyzy.github.io/img/PalletOne.png">
 <meta property="og:url" content="http://www.Pallet.One/">
     <title>PalletOne招聘</title>
     <link charset="utf-8" type="image/x-icon" rel="icon" href="img/logo.png"/>
@@ -19,9 +19,9 @@
 <div style="display:none;"><img src="img/PalletOne.png" alt=""></div>
 <section class="main">
     <!--AUDIO-->
-    <div class="music" id="musicMenu">
-        <audio src="audio.mp3" preload="none" loop id="musicAudio"></audio>
-    </div>
+    <!-- <div class="music" id="musicMenu"> -->
+        <!-- <audio src="audio.mp3" preload="none" loop id="musicAudio"></audio> -->
+    <!-- </div> -->
 
     <!--ARROW-->
     <div class="arrow"></div>
@@ -273,31 +273,6 @@
         }
     });
 
-    //->MUSIC
-    ~function () {
-        var musicMenu = document.getElementById('musicMenu'),
-                musicAudio = document.getElementById('musicAudio');
-        musicMenu.addEventListener('click', function () {
-            if (musicAudio.paused) {
-                musicAudio.play();
-                musicMenu.className = 'music move';
-                return;
-            }
-            musicAudio.pause();
-            musicMenu.className = 'music';
-        }, false);
-
-        function controlMusic() {
-            musicAudio.volume = 0.5;
-            musicAudio.play();
-            musicAudio.addEventListener('canplay', function () {
-                musicMenu.style.display = 'block';
-                musicMenu.className = 'music move';
-            }, false);
-        }
-
-        window.setTimeout(controlMusic, 1000);
-    }();
 </script>
 <script src="js/sdk_text_img.js"></script>
 <script src="js/enjoy.js"></script>
